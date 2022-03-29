@@ -1,0 +1,6 @@
+# Add Jupyter Notebook files in this directory.
+# Remove this directory there are no Notebooks.
+!.gitignore
+
+# Keras models logs
+logs

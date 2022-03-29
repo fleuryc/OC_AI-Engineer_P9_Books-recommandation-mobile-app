@@ -1,0 +1,38 @@
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+
+name: Python application
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+      - name: Install dev dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements-dev.txt ]; then pip install -r requirements-dev.txt; fi
+      - name: Lint with flake8
+        run: |
+          flake8 --count --show-source --statistics src/ tests/
+      - name: Type check with mypy
+        run: |
+          mypy --install-types --non-interactive src/ tests/
+      - name: Security check with bandit
+        run: |
+          bandit --recursive src/ tests/
+      - name: Test with pytest and report coverage to Codacy
+        env:
+          CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
+        run: |
+          pytest --cov-report=xml:coverage.xml --cov=src tests/
+          bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r coverage.xml

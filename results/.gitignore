@@ -1,0 +1,4 @@
+# Add any result or output files (from program comutation or Notebook execution) in this directory.
+# Remove this directory there are no result file.
+*
+!.gitignore

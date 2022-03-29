@@ -1,0 +1,17 @@
+# https://github.com/DavidAnson/markdownlint/blob/main/doc/Prettier.md
+# MD007/ul-indent - Unordered list indentation
+MD007:
+  # Spaces for indent
+  indent: 4
+
+# https://github.com/DavidAnson/markdownlint/blob/main/doc/Prettier.md
+# MD030/list-marker-space - Spaces after list markers
+MD030:
+  # Spaces for single-line unordered list items
+  ul_single: 3
+  # Spaces for multi-line unordered list items
+  ul_multi: 3
+
+# https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md#md043---required-heading-structure
+# MD043/required-headings/required-headers - Required heading structure
+MD043: false
