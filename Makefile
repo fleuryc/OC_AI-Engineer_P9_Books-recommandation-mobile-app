@@ -64,7 +64,7 @@ requirements.txt: check-system check-venv ## Create requirements.txt file
 	pip install --upgrade pip
 	pip install --upgrade jupyterlab ipykernel ipywidgets widgetsnbextension \
 		graphviz python-dotenv requests matplotlib seaborn plotly numpy \
-		statsmodels pandas sklearn tensorflow transformers 
+		statsmodels pandas sklearn tensorflow transformers kaggle
 	pip freeze | grep -v "pkg_resources" > requirements.txt
 	@echo ">>> OK."
 	@echo ""
@@ -158,9 +158,20 @@ clean-pycache: ## Remove python cache files
 	@echo ""
 
 .PHONY: dataset
-dataset: ## Download and extract dataset
-	@echo ">>> Downloading and saving data files..."
-	python -m src.data.make-dataset -t data/raw/
+dataset: ## Download and extract dataset from Kaggle
+	@echo ">>> Downloading and extracting data files..."
+	@if [ ! -f "data/raw/clicks/clicks/clicks_hour_384.csv" ] ; \
+	then \
+		echo "Downloading data..." ; \
+		kaggle datasets download -d gspmoreira/news-portal-user-interactions-by-globocom -p data/raw/ ; \
+		echo "Unzipping data..."; \
+		unzip -u -q data/raw/news-portal-user-interactions-by-globocom.zip -d data/raw/ ; \
+		echo "Removing zip file..." ; \
+		rm data/raw/news-portal-user-interactions-by-globocom.zip ; \
+		echo "Done."; \
+	else \
+		echo "Data files already downloaded."; \
+	fi
 	@echo ">>> OK."
 	@echo ""
 
