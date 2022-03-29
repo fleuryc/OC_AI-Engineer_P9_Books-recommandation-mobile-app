@@ -3,12 +3,16 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/ec70c0d336f545b2ab13682841ac44ef)](https://www.codacy.com/gh/fleuryc/OC_AI-Engineer_P9_Books-recommandation-mobile-app/dashboard)
 [![Codacy Badge](https://app.codacy.com/project/badge/Coverage/ec70c0d336f545b2ab13682841ac44ef)](https://www.codacy.com/gh/fleuryc/OC_AI-Engineer_P9_Books-recommandation-mobile-app/dashboard)
 
-- [Project](#project)
+- [My Content : Books recommandation mobile app](#my-content--books-recommandation-mobile-app)
+  - [Goals](#goals)
   - [Installation](#installation)
     - [Prerequisites](#prerequisites)
     - [Virtual environment](#virtual-environment)
     - [Dependencies](#dependencies)
+    - [Environment variables](#environment-variables)
+    - [Azure resources](#azure-resources)
   - [Usage](#usage)
+    - [Download data](#download-data)
     - [Run Notebook](#run-notebook)
     - [Quality Assurance](#quality-assurance)
   - [Troubleshooting](#troubleshooting)
@@ -19,7 +23,7 @@
 
 Repository of OpenClassrooms' [AI Engineer path](https://openclassrooms.com/fr/paths/188-ingenieur-ia), project #8
 
-Goal : use _Azure Machine Learning_ and _Azure Functions_ services, a _Recommander system_  embedded in a *React-Native* mobile app to produce the MVP of a books recommandation mobile app.
+Goal : use _Azure Machine Learning_ and _Azure Functions_ services, a _Recommander system_ embedded in a _React-Native_ mobile app to produce the MVP of a books recommandation mobile app.
 
 You can see the results here :
 
@@ -29,10 +33,10 @@ You can see the results here :
 
 ## Goals
 
-- [ ] create a first *Recommder System* based on **Content-Based Filtering**
-- [ ] improve the *Recommder System* with **Collaborative Filtering**
-- [ ] create the *React-Native* mobile app
-- [ ] integrate the *Recommder System* in *Azure Functions*
+- [ ] create a first _Recommder System_ based on **Content-Based Filtering**
+- [ ] improve the _Recommder System_ with **Collaborative Filtering**
+- [ ] create the _React-Native_ mobile app
+- [ ] integrate the _Recommder System_ in _Azure Functions_
 
 ## Installation
 
@@ -61,7 +65,7 @@ make install
 
 ### Environment variables
 
-- Set environment variable values in [.env](.env) file.
+- Set environment variable values in [.env](.env) file (copy or rename [.env.example](.env.example)).
 
 ### Azure resources
 
