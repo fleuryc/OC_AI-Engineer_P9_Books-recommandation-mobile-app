@@ -63,8 +63,8 @@ requirements.txt: check-system check-venv ## Create requirements.txt file
 	@echo ">>> Creating 'requirements.txt' file..."
 	pip install --upgrade pip
 	pip install --upgrade jupyterlab ipykernel ipywidgets widgetsnbextension \
-		graphviz python-dotenv requests matplotlib seaborn plotly numpy \
-		statsmodels pandas sklearn tensorflow transformers kaggle
+		graphviz python-dotenv requests matplotlib seaborn plotly dtale lux-api \
+		numpy statsmodels pandas sklearn tensorflow transformers kaggle
 	pip freeze | grep -v "pkg_resources" > requirements.txt
 	@echo ">>> OK."
 	@echo ""
@@ -84,7 +84,9 @@ deps: check-system check-venv requirements.txt ## Install dependencies with pip
 	@echo ""
 
 	@echo ">>> Installing JupyterLab Extensions..."
+	jupyter labextension install @jupyter-widgets/jupyterlab-manager
 	jupyter labextension install jupyterlab-plotly
+	jupyter labextension install luxwidget
 	@echo ">>> OK."
 	@echo ""
 
