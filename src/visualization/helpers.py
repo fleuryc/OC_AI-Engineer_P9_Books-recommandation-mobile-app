@@ -316,8 +316,8 @@ def line_2D(
     if isinstance(trendline, tuple):
         trendline = [trendline]
 
-    x = np.array([])
-    y = np.array([])
+    x: np.ndarray = np.array([])
+    y: np.ndarray = np.array([])
 
     if len(x_range) == 2:
         x_vals = np.linspace(x_range[0], x_range[1], num=200)
