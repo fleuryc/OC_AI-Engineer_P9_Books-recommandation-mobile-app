@@ -65,7 +65,8 @@ requirements.txt: check-system check-venv ## Create requirements.txt file
 	pip install --upgrade jupyterlab ipykernel ipywidgets widgetsnbextension \
 		graphviz python-dotenv requests matplotlib seaborn plotly bokeh \
 		dtale lux-api pandas-profiling autoviz great_expectations popmon \
-		numpy statsmodels pandas sklearn tensorflow transformers kaggle
+		numpy statsmodels pandas sklearn tensorflow transformers kaggle \
+		scikit-surprise
 	pip freeze | grep -v "pkg_resources" > requirements.txt
 	@echo ">>> OK."
 	@echo ""
