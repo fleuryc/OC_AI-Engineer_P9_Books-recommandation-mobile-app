@@ -100,7 +100,7 @@ jupyterlab-pygments==0.2.2
 jupyterlab-server==2.13.0
 jupyterlab-widgets==1.1.0
 kaggle==1.5.12
-kaleido==0.2.1
+kaleido==0.2.1.post1
 keras==2.8.0
 Keras-Preprocessing==1.1.2
 kiwisolver==1.4.2
