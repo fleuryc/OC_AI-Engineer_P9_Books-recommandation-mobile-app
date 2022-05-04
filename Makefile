@@ -1,23 +1,22 @@
 SHELL = /bin/bash
 
+PYTHON = python3.9
+
+
 .DEFAULT_GOAL := help
 
 .PHONY: check-system
 check-system: ## Check system for necessary tools
 	@echo ">>> Checking python..."
-	@python --version || { echo ">>> Python must be installed !"; exit 1; }
-	@echo ">>> OK."
-	@echo ""
-
-	@echo ">>> Checking pip..."
-	@pip --version || { echo ">>> Pip must be installed !"; exit 1; }
+	@${PYTHON} --version || { echo ">>> Python 3.9 must be installed !"; exit 1; }
+	${PYTHON} -m ensurepip --upgrade
 	@echo ">>> OK."
 	@echo ""
 
 .PHONY: venv
 venv: check-system ## Create virtual environment with venv
 	@echo ">>> Creating virtual environment : '$(PWD)/env' ..."
-	python -m venv env
+	${PYTHON} -m venv env
 	@echo ">>> OK."
 	@echo ""
 
@@ -34,7 +33,7 @@ clean-venv: ## Remove virtual environment
 .PHONY: check-venv
 check-venv: ## Check that virtual environment is active
 	@echo ">>> Checking that this project's virtual environment is active : '$(PWD)/env' ..."
-	@python -c "import sys; sys.exit(0) if (hasattr(sys, 'real_prefix') or (hasattr(sys, 'base_prefix') and sys.base_prefix != sys.prefix)) else sys.exit(1)" || { \
+	@${PYTHON} -c "import sys; sys.exit(0) if (hasattr(sys, 'real_prefix') or (hasattr(sys, 'base_prefix') and sys.base_prefix != sys.prefix)) else sys.exit(1)" || { \
 		echo ">>> ERROR : Virtual environment must be active !"; \
 		echo ">>> Activate with : 'source env/bin/activate' ."; \
 		echo ""; \
@@ -52,7 +51,6 @@ check-venv: ## Check that virtual environment is active
 
 requirements-dev.txt: check-system check-venv ## Create requirements-dev.txt file
 	@echo ">>> Creating 'requirements-dev.txt' file..."
-	pip install --upgrade pip
 	pip install --upgrade isort black "black[jupyter]" flake8 bandit mypy \
 		pytest pytest-cov
 	pip freeze | grep -v "pkg_resources" > requirements-dev.txt
@@ -61,12 +59,11 @@ requirements-dev.txt: check-system check-venv ## Create requirements-dev.txt fil
 
 requirements.txt: check-system check-venv ## Create requirements.txt file
 	@echo ">>> Creating 'requirements.txt' file..."
-	pip install --upgrade pip
 	pip install --upgrade jupyterlab ipykernel ipywidgets widgetsnbextension \
 		graphviz python-dotenv requests matplotlib seaborn plotly bokeh \
 		dtale lux-api pandas-profiling autoviz great_expectations popmon \
 		numpy statsmodels pandas sklearn tensorflow transformers kaggle \
-		scikit-surprise recommenders torch cornac 
+		scikit-surprise implicit recommenders torch cornac lightfm
 	pip freeze | grep -v "pkg_resources" > requirements.txt
 	@echo ">>> OK."
 	@echo ""
