@@ -29,14 +29,21 @@ You can see the results here :
 
 - [Presentation](https://fleuryc.github.io/OC_AI-Engineer_P9_Books-recommandation-mobile-app/index.html "Presentation")
 - [Notebook : HTML page with interactive plots](https://fleuryc.github.io/OC_AI-Engineer_P9_Books-recommandation-mobile-app/notebook.html "HTML page with interactive plots")
-- [Mobile App](https://www.clementflery.me "Mobile App")
 
 ## Goals
 
-- [ ] create a first _Recommder System_ based on **Content-Based Filtering**
-- [ ] improve the _Recommder System_ with **Collaborative Filtering**
-- [ ] create the _React-Native_ mobile app
-- [ ] integrate the _Recommder System_ in _Azure Functions_
+- [x] create a first _Recommder System_ based on **Content-Based Filtering**
+  - [Exploratory Data Analysis](notebooks/eda.ipynb "Exploratory Data Analysis")
+  - [Content-Based Filtering](notebooks/content-based-filtering.ipynb "Content-Based Filtering")
+- [x] improve the _Recommder System_ with **Collaborative Filtering**
+  - [Collaborative Filtering with Surprise](notebooks/surprise-collaborative-filtering.ipynb "Collaborative Filtering with Surprise")
+  - [Collaborative Filtering with Implicit](notebooks/implicit-collaborative-filtering.ipynb "Collaborative Filtering with Implicit")
+  - [Collaborative Filtering with Bilateral Variational Autoencoder (BiVAECF)](notebooks/matrix-factorization-collaborative-filtering.ipynb "Collaborative Filtering with Bilateral Variational Autoencoder (BiVAECF)")
+- [x] create the _React-Native_ mobile app
+  - [Mobile App](https://github.com/fleuryc/oc_p9_mobile-app "Mobile App")
+- [x] integrate the _Recommder System_ in _Azure Functions_
+  - [Store recommendations in Azure CosmosDB](notebooks/azure-store-recommendations.ipynb "Store recommendations in Azure CosmosDB")
+  - [Azure Function](https://github.com/fleuryc/oc_p9_function "Azure Function")
 
 ## Installation
 
