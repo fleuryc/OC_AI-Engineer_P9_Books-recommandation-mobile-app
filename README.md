@@ -21,14 +21,20 @@
 
 # My Content : Books recommandation mobile app
 
-Repository of OpenClassrooms' [AI Engineer path](https://openclassrooms.com/fr/paths/188-ingenieur-ia), project #8
+Repository of OpenClassrooms' [AI Engineer path](https://openclassrooms.com/fr/paths/188-ingenieur-ia), project #9
 
 Goal : use _Azure Machine Learning_ and _Azure Functions_ services, a _Recommander system_ embedded in a _React-Native_ mobile app to produce the MVP of a books recommandation mobile app.
 
 You can see the results here :
 
 - [Presentation](https://fleuryc.github.io/OC_AI-Engineer_P9_Books-recommandation-mobile-app/index.html "Presentation")
-- [Notebook : HTML page with interactive plots](https://fleuryc.github.io/OC_AI-Engineer_P9_Books-recommandation-mobile-app/notebook.html "HTML page with interactive plots")
+- [Notebook : HTML page with interactive plots](https://fleuryc.github.io/OC_AI-Engineer_P9_Books-recommandation-mobile-app/main.html "HTML page with interactive plots")
+
+This repository is part of a 3-repos project :
+
+- Main repo : [My Content : Books recommandation mobile app](https://github.com/fleuryc/OC_AI-Engineer_P9_Books-recommandation-mobile-app) : **this repo**
+- [Azure Function](https://github.com/fleuryc/oc_p9_function "Azure Function")
+- [Mobile App](https://github.com/fleuryc/oc_p9_mobile-app "Mobile App")
 
 ## Goals
 
@@ -77,8 +83,10 @@ make install
 
 ### Azure resources
 
-- AzureML [Workspace](https://docs.microsoft.com/en-us/azure/machine-learning/concept-workspace#-create-a-workspace "Create a workspace")
-- ...
+The app will query an [Azure CosmosDB](https://azure.microsoft.com/en-us/services/cosmos-db/ "Azure CosmosDB") database and an [Azure Function](https://azure.microsoft.com/en-us/services/functions/ "Azure Functions") that will return a list of relevant articles.
+
+- [Azure Cosmos DB input binding for Azure Functions 2.x and higher - HTTP trigger, look up ID from route data](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-cosmosdb-v2-input?tabs=in-process%2Cfunctionsv2&pivots=programming-language-python#http-trigger-look-up-id-from-route-data-python "Azure Cosmos DB input binding for Azure Functions 2.x and higher - HTTP trigger, look up ID from route data")
+- [Quickstart: Create a function in Azure with Python using Visual Studio Code](https://docs.microsoft.com/fr-fr/azure/azure-functions/create-first-function-vs-code-python "Quickstart: Create a function in Azure with Python using Visual Studio Code")
 
 ## Usage
 
