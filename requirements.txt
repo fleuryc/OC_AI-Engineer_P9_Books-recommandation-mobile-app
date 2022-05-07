@@ -60,7 +60,7 @@ gast==0.5.3
 gitdb==4.0.9
 GitPython==3.1.27
 google-auth==2.6.6
-google-auth-oauthlib==0.4.6
+google-auth-oauthlib==0.5.1
 google-pasta==0.2.0
 graphviz==0.20
 great-expectations==0.15.4
