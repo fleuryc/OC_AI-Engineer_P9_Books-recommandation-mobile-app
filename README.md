@@ -33,12 +33,14 @@ You can see the results here :
 ## Goals
 
 - [x] create a first _Recommder System_ based on **Content-Based Filtering**
-  - [Exploratory Data Analysis](notebooks/eda.ipynb "Exploratory Data Analysis")
+  - [Main notebook (EDA)](notebooks/main.ipynb "Exploratory Data Analysis")
   - [Content-Based Filtering](notebooks/content-based-filtering.ipynb "Content-Based Filtering")
 - [x] improve the _Recommder System_ with **Collaborative Filtering**
   - [Collaborative Filtering with Surprise](notebooks/surprise-collaborative-filtering.ipynb "Collaborative Filtering with Surprise")
   - [Collaborative Filtering with Implicit](notebooks/implicit-collaborative-filtering.ipynb "Collaborative Filtering with Implicit")
-  - [Collaborative Filtering with Bilateral Variational Autoencoder (BiVAECF)](notebooks/matrix-factorization-collaborative-filtering.ipynb "Collaborative Filtering with Bilateral Variational Autoencoder (BiVAECF)")
+  - [Collaborative Filtering with Bilateral Variational Autoencoder (BiVAECF)](notebooks/bilateral-variational-autoencoder.ipynb "Collaborative Filtering with Bilateral Variational Autoencoder (BiVAECF)")
+- [+] improve the _Recommder System_ with **Hybrid Filtering**
+  - [Hybrid Filtering with LightMF](notebooks/lightmf-hybrid-filtering.ipynb "Hybrid Filtering with LightMF")
 - [x] create the _React-Native_ mobile app
   - [Mobile App](https://github.com/fleuryc/oc_p9_mobile-app "Mobile App")
 - [x] integrate the _Recommder System_ in _Azure Functions_
