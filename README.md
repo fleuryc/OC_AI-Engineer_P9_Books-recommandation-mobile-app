@@ -38,7 +38,6 @@ You can see the results here :
 - [x] improve the _Recommder System_ with **Collaborative Filtering**
   - [Collaborative Filtering with Surprise](notebooks/surprise-collaborative-filtering.ipynb "Collaborative Filtering with Surprise")
   - [Collaborative Filtering with Implicit](notebooks/implicit-collaborative-filtering.ipynb "Collaborative Filtering with Implicit")
-  - [Collaborative Filtering with Bilateral Variational Autoencoder (BiVAECF)](notebooks/bilateral-variational-autoencoder.ipynb "Collaborative Filtering with Bilateral Variational Autoencoder (BiVAECF)")
 - [+] improve the _Recommder System_ with **Hybrid Filtering**
   - [Hybrid Filtering with LightMF](notebooks/lightmf-hybrid-filtering.ipynb "Hybrid Filtering with LightMF")
 - [x] create the _React-Native_ mobile app
