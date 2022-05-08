@@ -36,6 +36,8 @@ This repository is part of a 3-repos project :
 - [Azure Function](https://github.com/fleuryc/oc_p9_function "Azure Function")
 - [Mobile App](https://github.com/fleuryc/oc_p9_mobile-app "Mobile App")
 
+![Current MVP architecture](docs/img/current-architecture.svg "Current MVP architecture")
+
 ## Goals
 
 - [x] create a first _Recommder System_ based on **Content-Based Filtering**
@@ -44,7 +46,7 @@ This repository is part of a 3-repos project :
 - [x] improve the _Recommder System_ with **Collaborative Filtering**
   - [Collaborative Filtering with Surprise](notebooks/surprise-collaborative-filtering.ipynb "Collaborative Filtering with Surprise")
   - [Collaborative Filtering with Implicit](notebooks/implicit-collaborative-filtering.ipynb "Collaborative Filtering with Implicit")
-- [+] improve the _Recommder System_ with **Hybrid Filtering**
+- [x] improve the _Recommder System_ with **Hybrid Filtering**
   - [Hybrid Filtering with LightMF](notebooks/lightmf-hybrid-filtering.ipynb "Hybrid Filtering with LightMF")
 - [x] create the _React-Native_ mobile app
   - [Mobile App](https://github.com/fleuryc/oc_p9_mobile-app "Mobile App")
